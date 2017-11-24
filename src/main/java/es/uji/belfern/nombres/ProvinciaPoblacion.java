@@ -71,7 +71,7 @@ public class ProvinciaPoblacion {
 	public String getPoblacion(String provincia) {
 		List<String> poblaciones = provinciaPoblacion.get(provincia);
 		if(poblaciones != null) {
-			return poblaciones.get(random.nextInt(poblaciones.size()));
+			return poblaciones.get(Math.abs(random.nextInt(poblaciones.size())));
 		}
 		else return "La provincia no existe.";
 	}

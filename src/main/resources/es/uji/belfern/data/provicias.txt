@@ -1,32 +1,32 @@
-�lava;313819
+ï¿½lava;313819
 Albacete;400891
 Alicante;1917012
-Almer�a;684426
-�vila;171680
+Almerï¿½a;684426
+ï¿½vila;171680
 Badajoz;688777
 Baleares;1095426
 Barcelona;5487935
 Burgos;375563
-C�ceres;413633
-C�diz;1230594
-Castell�n;602301
+Cï¿½ceres;413633
+Cï¿½diz;1230594
+CastellÃ³n;602301
 Ciudad Real;527273
-C�rdoba;803998
-Coru�a (A);1145488
+Cï¿½rdoba;803998
+Coruï¿½a (A);1145488
 Cuenca;217363
 Girona;747782
 Granada;907428
 Guadalajara;246151
-Guip�zcoa;705698
+Guipï¿½zcoa;705698
 Huelva;513403
 Huesca;228409
-Ja�n;669782
-Le�n;500169
+Jaï¿½n;669782
+Leï¿½n;500169
 Lleida;436402
 Rioja (La);321702
 Lugo;355195
 Madrid;6386932
-M�laga;1593068
+Mï¿½laga;1593068
 Murcia;1446520
 Navarra;630578
 Ourense;335642
