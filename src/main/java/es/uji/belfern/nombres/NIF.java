@@ -1,4 +1,4 @@
-package nombres;
+package es.uji.belfern.nombres;
 
 import java.util.Random;
 

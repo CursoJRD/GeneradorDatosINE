@@ -1,4 +1,4 @@
-package nombres;
+package es.uji.belfern.nombres;
 
 public class StringIntervalo {
 	private String nombre;

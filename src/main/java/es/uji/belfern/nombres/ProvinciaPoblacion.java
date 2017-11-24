@@ -1,4 +1,4 @@
-package nombres;
+package es.uji.belfern.nombres;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Random;
 
-import data.BalancedTree;
+import es.uji.belfern.data.BalancedTree;
 
 public class ProvinciaPoblacion {
 	private Hashtable<String, List<String>> provinciaPoblacion;
@@ -61,7 +61,7 @@ public class ProvinciaPoblacion {
 			List<String> poblaciones = provinciaPoblacion.get(provincia);
 			if(poblaciones == null) provinciaPoblacion.put(provincia, new ArrayList<String>());
 			else poblaciones.add(tokens[2]);
-		} else System.out.println("Algo raro hay en esta línea: " + linea);
+		} else System.out.println("Algo raro hay en esta lï¿½nea: " + linea);
 	}
 
 	public String getProvincia() {

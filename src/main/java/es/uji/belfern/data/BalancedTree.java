@@ -1,8 +1,8 @@
-package data;
+package es.uji.belfern.data;
 
 import java.util.ArrayList;
 
-import nombres.StringIntervalo;
+import es.uji.belfern.nombres.StringIntervalo;
 
 public class BalancedTree {
 	private Node root;
@@ -50,13 +50,13 @@ public class BalancedTree {
 	}
 	
 	private String contains(Node nodo, float value) {
-		if(nodo == null) return "No se encotr—.";
+		if(nodo == null) return "No se encotrï¿½.";
 		int contiene = nodo.contains(value);
 		if(contiene == 0) return nodo.getIntervalo().getNombre();
 		else {
 			if(contiene < 0) return contains(nodo.getLeft(), value);
 			else if(contiene > 0) return contains(nodo.getRight(), value);
 		}
-		return "No se encontr—.";
+		return "No se encontrï¿½.";
 	}	
 }

@@ -1,13 +1,14 @@
-package es.uji.www;
+package es.uji.belfern.generador;
 
 import java.util.Random;
 
-import nombres.LeeFichero;
-import nombres.NIF;
-import nombres.ProvinciaPoblacion;
-import data.BalancedTree;
+import es.uji.belfern.nombres.LeeFichero;
+import es.uji.belfern.nombres.NIF;
+import es.uji.belfern.nombres.ProvinciaPoblacion;
+import es.uji.belfern.data.BalancedTree;
 
 public class GeneradorDatosINE {
+	private static final String RUTA = "es/uji/belfern/";
 	private BalancedTree hombres;
 	private BalancedTree mujeres;
 	private BalancedTree apellidos;
@@ -27,27 +28,27 @@ public class GeneradorDatosINE {
 	}
 	
 	private final void leeHombres() {
-		LeeFichero lector = new LeeFichero("data/nombresHombre.txt");
+		LeeFichero lector = new LeeFichero(RUTA + "data/nombresHombre.txt");
 		hombres = new BalancedTree(lector.getIntervalos());
 	}
 	
 	private final void leeMujeres() {
-		LeeFichero lector = new LeeFichero("data/nombresMujer.txt");
+		LeeFichero lector = new LeeFichero(RUTA + "data/nombresMujer.txt");
 		mujeres = new BalancedTree(lector.getIntervalos());
 	}
 	
 	private final void leeApellidos() {
-		LeeFichero lector = new LeeFichero("data/apellidos.txt");
+		LeeFichero lector = new LeeFichero(RUTA + "data/apellidos.txt");
 		apellidos = new BalancedTree(lector.getIntervalos());
 	}
 	
 	private final void leeEdades() {
-		LeeFichero lector = new LeeFichero("data/edades.txt");
+		LeeFichero lector = new LeeFichero(RUTA + "data/edades.txt");
 		edades = new BalancedTree(lector.getIntervalos());
 	}
 	
 	private final void leeProvinciaPoblacion() {
-		provinciaPoblacion = new ProvinciaPoblacion("data/provincias.txt", "data/poblaciones.txt");
+		provinciaPoblacion = new ProvinciaPoblacion(RUTA + "data/provincias.txt", RUTA + "data/poblaciones.txt");
 	}
 	
 	public String getNombreHombre() {		

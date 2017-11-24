@@ -1,4 +1,4 @@
-package nombres;
+package es.uji.belfern.nombres;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -28,7 +28,7 @@ public class LeeFichero {
 	
 	private final ArrayList<NombreFrecuencia> leeFichero() {
 		try {
-			// Las dos siguiente l’neas leen los datos desde el .jar
+			// Las dos siguiente lï¿½neas leen los datos desde el .jar
 			InputStream is = getClass().getClassLoader().getResourceAsStream(nombreFichero);
 			InputStreamReader fr = new InputStreamReader(is);
 //			FileReader fr;

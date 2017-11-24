@@ -1,6 +1,6 @@
-package data;
+package es.uji.belfern.data;
 
-import nombres.StringIntervalo;
+import es.uji.belfern.nombres.StringIntervalo;
 
 public class Node {
 	private Node left = null;
@@ -37,6 +37,6 @@ public class Node {
 
 	@Override
 	public String toString() {
-		return "Node [data=" + intervalo + "]";
+		return "Node [es.uji.www.data=" + intervalo + "]";
 	}
 }

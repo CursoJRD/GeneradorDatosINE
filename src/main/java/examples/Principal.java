@@ -1,6 +1,6 @@
 package examples;
 
-import es.uji.www.GeneradorDatosINE;
+import es.uji.belfern.generador.GeneradorDatosINE;
 
 public final class Principal {
 	private Principal() {

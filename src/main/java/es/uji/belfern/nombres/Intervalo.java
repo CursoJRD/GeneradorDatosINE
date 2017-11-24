@@ -1,4 +1,4 @@
-package nombres;
+package es.uji.belfern.nombres;
 
 public class Intervalo {
 	private float min;
