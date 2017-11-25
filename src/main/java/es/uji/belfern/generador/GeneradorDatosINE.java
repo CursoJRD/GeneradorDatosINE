@@ -14,19 +14,22 @@ public class GeneradorDatosINE {
 	private BalancedTree apellidos;
 	private BalancedTree edades;
 	private ProvinciaPoblacion provinciaPoblacion;
-	private final Random random;
-	private final NIF nif;
+	private final Random random = new Random();
+	private final NIF nif = new NIF();
 
 	public GeneradorDatosINE() {
-		random = new Random();
-		nif = new NIF();
+//		new Thread(() -> initializtion()).run();
+		initializtion();
+	}
+
+	private void initializtion() {
 		leeHombres();
 		leeMujeres();
 		leeApellidos();
 		leeProvinciaPoblacion();
 		leeEdades();
 	}
-	
+
 	private final void leeHombres() {
 		LeeFichero lector = new LeeFichero(RUTA + "data/nombresHombre.txt");
 		hombres = new BalancedTree(lector.getIntervalos());
@@ -51,7 +54,7 @@ public class GeneradorDatosINE {
 		provinciaPoblacion = new ProvinciaPoblacion(RUTA + "data/provincias.txt", RUTA + "data/poblaciones.txt");
 	}
 	
-	public String getNombreHombre() {		
+	public String getNombreHombre() {
 		return hombres.contains(random.nextFloat()*100);
 	}
 	
@@ -69,7 +72,6 @@ public class GeneradorDatosINE {
 	}
 	
 	public int getEdad() {
-//		return new Integer(edades.contains(random.nextFloat()*100)).intValue();
 		return Integer.valueOf(edades.contains(random.nextFloat()*100));
 	}
 	

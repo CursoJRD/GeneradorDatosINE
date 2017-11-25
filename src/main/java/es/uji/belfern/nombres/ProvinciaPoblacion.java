@@ -38,7 +38,6 @@ public class ProvinciaPoblacion {
 		try {
 			InputStream is = getClass().getClassLoader().getResourceAsStream(ficheroPoblacion);
 			InputStreamReader fr = new InputStreamReader(is);
-//			FileReader fr = new FileReader(ficheroPoblacion);
 			BufferedReader br = new BufferedReader(fr);
 			String linea;
 			while((linea = br.readLine()) != null) {
@@ -57,9 +56,12 @@ public class ProvinciaPoblacion {
 		if(tokens.length == 3) {
 			int codigoProvincia = Integer.parseInt(tokens[0]) - 1;
 			String provincia = listaProvincias.get(codigoProvincia).getNombre();
-//			System.out.println("Provincia: " + provincia);
 			List<String> poblaciones = provinciaPoblacion.get(provincia);
-			if(poblaciones == null) provinciaPoblacion.put(provincia, new ArrayList<String>());
+			if(poblaciones == null) {
+			    List<String> nuevaPoblaciones = new ArrayList<>();
+			    nuevaPoblaciones.add(tokens[2]);
+			    provinciaPoblacion.put(provincia, nuevaPoblaciones);
+            }
 			else poblaciones.add(tokens[2]);
 		} else System.out.println("Algo raro hay en esta l�nea: " + linea);
 	}
@@ -70,8 +72,8 @@ public class ProvinciaPoblacion {
 
 	public String getPoblacion(String provincia) {
 		List<String> poblaciones = provinciaPoblacion.get(provincia);
-		if(poblaciones != null) {
-			return poblaciones.get(Math.abs(random.nextInt(poblaciones.size())));
+        if(poblaciones != null) {
+			return poblaciones.get((random.nextInt(poblaciones.size())));
 		}
 		else return "La provincia no existe.";
 	}
