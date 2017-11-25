@@ -9,14 +9,14 @@ public final class Principal {
 
 	private void ejecuta() {
 		
-		GeneradorDatosINE nie = new GeneradorDatosINE();
-		System.out.println("Hombre: " + nie.getNombreHombre());
-		System.out.println("Mujer: " + nie.getNombreMujer());
-		System.out.println("Nombre: " + nie.getNombre());
-		String provincia = nie.getProvincia();
+		GeneradorDatosINE ine = new GeneradorDatosINE();
+		System.out.println("Hombre: " + ine.getNombreHombre());
+		System.out.println("Mujer: " + ine.getNombreMujer());
+		System.out.println("Nombre: " + ine.getNombre());
+		String provincia = ine.getProvincia();
 		System.out.println("Provincia: " + provincia);
-		System.out.println("Poblacion: " + nie.getPoblacion(provincia));
-		System.out.println("DNI: " + nie.getNIF());
+		System.out.println("Poblacion: " + ine.getPoblacion(provincia));
+		System.out.println("DNI: " + ine.getNIF());
 	}
 
 	public static void main(String[] args) {

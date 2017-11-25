@@ -58,12 +58,11 @@ public class ProvinciaPoblacion {
 			String provincia = listaProvincias.get(codigoProvincia).getNombre();
 			List<String> poblaciones = provinciaPoblacion.get(provincia);
 			if(poblaciones == null) {
-			    List<String> nuevaPoblaciones = new ArrayList<>();
-			    nuevaPoblaciones.add(tokens[2]);
-			    provinciaPoblacion.put(provincia, nuevaPoblaciones);
+			    poblaciones = new ArrayList<>();
+			    provinciaPoblacion.put(provincia, poblaciones);
             }
-			else poblaciones.add(tokens[2]);
-		} else System.out.println("Algo raro hay en esta l�nea: " + linea);
+			poblaciones.add(tokens[2]);
+		} else System.out.println("Algo raro hay en esta línea: " + linea);
 	}
 
 	public String getProvincia() {
